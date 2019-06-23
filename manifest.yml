@@ -1,0 +1,4 @@
+applications:
+- name: DeployApp
+  random-route: true
+  memory: 128M
