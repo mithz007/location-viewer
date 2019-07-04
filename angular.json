@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DeployApp": {
+    "Location-Viewer": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/DeployApp",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "DeployApp:build"
+            "browserTarget": "Location-Viewer:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "DeployApp:build:production"
+              "browserTarget": "Location-Viewer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DeployApp:build"
+            "browserTarget": "Location-Viewer:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "DeployApp-e2e": {
+    "Location-Viewer-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "DeployApp:serve"
+            "devServerTarget": "Location-Viewer:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "DeployApp:serve:production"
+              "devServerTarget": "Location-Viewer:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "DeployApp"
+  "defaultProject": "Location-Viewer"
 }

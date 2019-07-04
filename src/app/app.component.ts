@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppcontextService } from './appcontext.service';
 // import { } from '@types/googlemaps';
 
 @Component({
@@ -7,10 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  constructor(private appContext: AppcontextService){}
   title = 'map';
-  lat: number = 22.572645;
-  lng: number = 88.363892;
+  // lat: number = 22.572645;
+  // lng: number = 88.363892;
   
+  getCurrentPage(){
+    return this.appContext.currentPage;
+  }
   // @ViewChild('gmap') gmapElement: any;
   // map: google.maps.Map;
 
