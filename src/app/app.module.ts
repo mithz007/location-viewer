@@ -6,8 +6,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapsComponent } from './maps/maps.component';
 import { HelpComponent } from './help/help.component';
+import { SearchComponent } from './search/search.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
+  {
+    path: 'search',
+    component: SearchComponent
+  },
   {
     path: 'help',
     component: HelpComponent
@@ -32,16 +39,19 @@ const appRoutes: Routes = [
     AppComponent,
     DashboardComponent,
     MapsComponent,
-    HelpComponent
+    HelpComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDt16TZpXfDaxOU9G9udtCvVj7u_hYVFpo'
-    })
-  ],
-  exports:[AgmCoreModule],
+    }),
+    CommonModule,
+    HttpClientModule
+    ],
+  exports: [AgmCoreModule],
   providers: [],
   bootstrap: [AppComponent]
 })
